@@ -10,6 +10,6 @@ public static class TextWordExtractor
         var sentences = text.Split(splits, StringSplitOptions.RemoveEmptyEntries);
         return sentences.Select(s => Regex.Matches(s, @"\p{L}+")
                 .Cast<Match>()
-                .Select(m => m.Value));
+                .Select(m => m.Value.ToLower()));
     }
 }
