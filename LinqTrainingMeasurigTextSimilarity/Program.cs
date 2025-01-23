@@ -5,12 +5,12 @@ string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.Fu
 
 InputHandler inputHandler = new (projectDirectory);
 
-string text1= inputHandler.GetFileText("Enter the name of the first file:" );
-string text2= inputHandler.GetFileText("Enter the name of the second file:");
+string firstText= inputHandler.GetFileText("Enter the name of the first file:" );
+string secondText2= inputHandler.GetFileText("Enter the name of the second file:");
 
 int nGramLength= inputHandler.GetNGramsLength();
  
-ParserFacade parserFacade = new(text1, text2, nGramLength);
+ParserFacade parserFacade = new(firstText, secondText2, nGramLength);
 
 Console.WriteLine($"Number of N-grams in the first text: {parserFacade.FirstTextNGramNumber}");
 
