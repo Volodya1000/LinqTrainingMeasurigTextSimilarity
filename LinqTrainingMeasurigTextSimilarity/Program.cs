@@ -9,7 +9,7 @@ string text1= inputHandler.GetFileText("Enter the name of the first file:" );
 string text2= inputHandler.GetFileText("Enter the name of the second file:");
 
 int nGramLength= inputHandler.GetNGramsLength();
-
+ 
 ParserFacade parserFacade = new(text1, text2, nGramLength);
 
 Console.WriteLine($"Number of N-grams in the first text: {parserFacade.FirstTextNGramNumber}");
